@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Gracias por tu opinión!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #FFF8E7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('https://www.transparenttextures.com/patterns/food.png');
+      background-size: auto;
+      text-align: center;
+    }
+
+    /* Estilo para la pestaña inicio */
+    .inicio-tab {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #F77F00;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.3s;
+      z-index: 1000;
+    }
+    .inicio-tab:hover {
+      background-color: #E63946;
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: #E63946;
+      font-size: 32px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    form {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #FFB703;
+      margin-top: 5px;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    select:focus, textarea:focus {
+      border-color: #2A9D8F;
+      background-color: #f0fff8;
+    }
+
+    button {
+      background-color: #F77F00;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #E63946;
+      transform: scale(1.05);
+    }
+
+    /* Rafa flotante */
+    .personaje-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .rafa-float {
+      width: 180px;
+      border-radius: 50%;
+      border: 4px solid #FFB703;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .rafa-float:hover {
+      transform: scale(1.05) rotate(-3deg);
+      cursor: pointer;
+    }
+
+    .bubble {
+      background: #fff;
+      border: 3px solid #FFB703;
+      border-radius: 15px;
+      padding: 12px 16px;
+      margin-right: 15px;
+      font-size: 14px;
+      color: #333;
+      max-width: 200px;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .bubble::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent #FFB703;
+    }
+
+    .bubble::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -11px;
+      transform: translateY(-50%);
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+    }
+  </style>
+</head>
+<body>
+
+ <a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/Pagina3.html" class="inicio-tab">Inicio</a>
+
+  <h1>🎉 ¡Gracias por tu opinión!</h1>
+  <p>Ahora, cuéntanos un poco más sobre tu experiencia. Tu retroalimentación nos ayuda a mejorar. 🙌</p>
+
+  <form action="https://formspree.io/f/manbgnvq" method="POST">
+    <label>
+      😊 Amabilidad del personal:
+      <select name="amabilidad" required>
+        <option value="">-- Selecciona --</option>
+        <option value="5">5 - Muy satisfecho</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 - Poca satisfacción</option>
+      </select>
+    </label>
+
+    <label>
+      🧼 Limpieza del lugar:
+      <select name="limpieza" required>
+        <option value="">-- Selecciona --</option>
+        <option value="5">5 - Muy satisfecho</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 - Poca satisfacción</option>
+      </select>
+    </label>
+
+    <label>
+      🍽️ Presentación del producto:
+      <select name="presentacion" required>
+        <option value="">-- Selecciona --</option>
+        <option value="5">5 - Muy satisfecho</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 - Poca satisfacción</option>
+      </select>
+    </label>
+
+    <label>
+      🌟 Satisfacción general:
+      <select name="satisfaccion_general" required>
+        <option value="">-- Selecciona --</option>
+        <option value="5">5 - Muy satisfecho</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 - Poca satisfacción</option>
+      </select>
+    </label>
+
+    <label>
+      💬 Opiniones y/o sugerencias:
+      <textarea name="sugerencias" placeholder="Comparte tu opinión o ideas para mejorar..." rows="4"></textarea>
+    </label>
+
+    <button type="submit">📨 Enviar</button>
+  </form>
+
+  <!-- Rafa flotando con burbuja -->
+  <div class="personaje-container">
+    <div class="bubble">¡Gracias por participar en el formulario culinario! 🍕😃</div>
+    <img src="Rafa.jfif" alt="Rafa Polinesio" class="rafa-float" />
+  </div>
+
+</body>
+</html>

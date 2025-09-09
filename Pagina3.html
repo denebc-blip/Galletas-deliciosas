@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galletas Deliciosas</title>
+    <style>
+        /* Estilos para la página principal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1; /* Amarillo claro */
+            color: #6d4c41; /* Marrón */
+            min-height: 100vh;
+            padding-bottom: 80px; /* espacio para footer fijo */
+        }
+
+        header {
+            background-color: #f8bbd0; /* Rosa claro */
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6d4c41;
+            font-weight: bold;
+            padding: 5px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b; /* Amarillo brillante */
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        nav .dropdown:hover > .dropdown-content {
+            display: block;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8bbd0; /* Rosa claro */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav .dropdown-content li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ffd54f; /* Amarillo suave */
+        }
+
+        nav .dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        nav .dropdown-content li a {
+            color: #6d4c41;
+            font-weight: normal;
+        }
+
+        nav .dropdown-content li a:hover {
+            background-color: #ffeb3b;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        section {
+            max-width: 900px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #ad1457; /* Rosa más intenso para títulos */
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #f8bbd0;
+            text-align: center;
+            padding: 12px 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-weight: bold;
+            color: #6d4c41;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Estilo para el apartado "Danos tu opinión" */
+        #opinion {
+            text-align: center;
+            margin: 40px auto;
+        }
+        #opinion a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #ffb74d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #opinion a:hover {
+            background-color: #ffa726;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Menú &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/cortes.html">Cortes</a></li>
+                        <li><a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/Bebidas.html">Bebidas</a></li>
+                        <li><a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/Postres.html">Postres</a></li>
+                    </ul>
+                </li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#empresa">Nuestra Empresa</a></li>
+                <li><a href="#sucursal">Sucursal y Domicilio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Beneficios -->
+    <section id="beneficios">
+        <h1>Beneficios de Comer Galletas</h1>
+        <p>Comer galletas no solo es delicioso, sino también tiene varios beneficios para tu salud:</p>
+        <ul>
+            <li>Fuente de energía rápida.</li>
+            <li>Ricas en carbohidratos y fibra.</li>
+            <li>Mejoran el ánimo debido a su contenido en azúcares naturales.</li>
+            <li>Contienen antioxidantes que pueden beneficiar la salud cardiovascular.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Galletas deliciosas" />
+    </section>
+
+    <!-- Sección de Empresa -->
+    <section id="empresa">
+        <h1>Valores e Inicios de Nuestra Empresa</h1>
+        <p>Fundada con el amor por la repostería, nuestra empresa comenzó con una pequeña receta familiar y creció hasta convertirse en un referente en la producción de galletas de calidad. Nuestros valores incluyen:</p>
+        <ul>
+            <li>Calidad en cada producto.</li>
+            <li>Innovación constante en sabores.</li>
+            <li>Compromiso con la sostenibilidad.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80" alt="Nuestra empresa" />
+    </section>
+
+    <!-- Sección Sucursal y Domicilio -->
+    <section id="sucursal">
+        <h1>Nuestra Sucursal y Servicio a Domicilio</h1>
+        <h2>Ubicación de la Sucursal</h2>
+        <p>Nuestra sucursal principal se encuentra en la siguiente dirección:</p>
+        <address>
+            Calle de las Galletas 123,<br />
+            Colonia Dulce Aroma,<br />
+            Ciudad Sabor, CP 45678,<br />
+            País: México.
+        </address>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Sucursal de Galletas" />
+
+        <h2>¿Cómo pedir a domicilio?</h2>
+        <p>Para recibir nuestras deliciosas galletas en la comodidad de tu hogar, puedes:</p>
+        <ul>
+            <li>Hacer tu pedido por teléfono al <strong>+52 55 1234 5678</strong>.</li>
+            <li>Enviar un WhatsApp al <strong>+52 55 8765 4321</strong>.</li>
+            <li>Usar nuestra app móvil disponible para iOS y Android (próximamente).</li>
+            <li>Visitar nuestra página de pedidos en línea en <a href="https://galletasdeliciosas.com/pedidos" target="_blank" rel="noopener noreferrer">galletasdeliciosas.com/pedidos</a>.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1542838687-44e83ed6c785?auto=format&fit=crop&w=800&q=80" alt="Entrega a domicilio" />
+    </section>
+
+    <!-- Apartado de opinión -->
+    <section id="opinion">
+        <h1>📝 Danos tu opinión</h1>
+        <p>Tu opinión es muy importante para nosotros. ¡Haz clic abajo para compartirla!</p>
+        <a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/2Formulario.html">
+            Ir al formulario ✍️
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Galletas Deliciosas | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>

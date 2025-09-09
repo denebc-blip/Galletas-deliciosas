@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú de Cortes</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 5px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b; /* Amarillo */
+            color: #000;
+            border-radius: 4px;
+        }
+
+        section {
+            max-width: 900px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #000;
+            border-bottom: 2px solid #ffeb3b;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #000;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .ingredientes, .receta {
+            margin-left: 25px;
+            font-style: italic;
+            color: #666;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 12px 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Pagina3.html">Inicio</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="postres.html">Postres</a></li>
+                <li><a href="cortes.html">Cortes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <section>
+        <h1>Menú de Cortes</h1>
+
+        <!-- Corte 1: Bife de Chorizo -->
+        <h2>Bife de Chorizo</h2>
+        <img src="https://images.unsplash.com/photo-1566825102-6e0e8719c4ea?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA5fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080" alt="Bife de Chorizo">
+        <ul>
+            <li><strong>Ingredientes:</strong>
+                <div class="ingredientes">Bife de chorizo, sal, pimienta, aceite de oliva, ajo, romero.</div>
+            </li>
+            <li><strong>Receta:</strong>
+                <div class="receta">Sazonar el bife con sal y pimienta. Calienta una sartén con aceite de oliva, añade ajo y romero. Cocina el bife por 5 minutos de cada lado, hasta alcanzar el punto de cocción deseado.</div>
+            </li>
+        </ul>
+
+        <!-- Corte 2: Entrecot -->
+        <h2>Entrecot</h2>
+        <img src="https://images.unsplash.com/photo-1593564139208-67b97827da5f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA5fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080" alt="Entrecot">
+        <ul>
+            <li><strong>Ingredientes:</strong>
+                <div class="ingredientes">Entrecot, sal gruesa, aceite de oliva, ajo, tomillo.</div>
+            </li>
+            <li><strong>Receta:</strong>
+                <div class="receta">Sazona el entrecot con sal gruesa y aceite de oliva. Cocina a fuego alto durante 3-4 minutos de cada lado. Añade ajo y tomillo para dar más sabor.</div>
+            </li>
+        </ul>
+
+        <!-- Corte 3: Costillas de Cerdo -->
+        <h2>Costillas de Cerdo</h2>
+        <img src="https://images.unsplash.com/photo-1612820148384-d60e926e9f56?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA5fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080" alt="Costillas de Cerdo">
+        <ul>
+            <li><strong>Ingredientes:</strong>
+                <div class="ingredientes">Costillas de cerdo, salsa barbacoa, sal, pimienta, azúcar moreno, ajo en polvo.</div>
+            </li>
+            <li><strong>Receta:</strong>
+                <div class="receta">Sazona las costillas con sal, pimienta, azúcar moreno y ajo en polvo. Cubre con salsa barbacoa y hornea a 180°C durante 45 minutos, untando con más salsa cada 15 minutos.</div>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Galletas Deliciosas | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
+
+
+ 
+
+  
+

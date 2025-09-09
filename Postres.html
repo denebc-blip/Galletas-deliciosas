@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú de Postres</title>
+    <style>
+        /* Estilos para el menú de postres con rosa y amarillo claro */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1; /* Amarillo claro */
+            color: #6d4c41; /* Marrón */
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: #f8bbd0; /* Rosa claro */
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6d4c41;
+            font-weight: bold;
+            padding: 5px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b; /* Amarillo brillante */
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        nav .dropdown:hover > .dropdown-content {
+            display: block;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8bbd0; /* Rosa claro */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav .dropdown-content li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ffd54f; /* Amarillo suave */
+        }
+
+        nav .dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        nav .dropdown-content li a {
+            color: #6d4c41;
+            font-weight: normal;
+        }
+
+        nav .dropdown-content li a:hover {
+            background-color: #ffeb3b;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        section {
+            max-width: 900px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #ad1457; /* Rosa más intenso para títulos */
+            border-bottom: 2px solid #ffeb3b; /* Amarillo brillante */
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #ad1457;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .ingredientes, .receta {
+            margin-left: 25px;
+            font-style: italic;
+            color: #444;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #f8bbd0; /* Rosa claro */
+            text-align: center;
+            padding: 12px 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-weight: bold;
+            color: #6d4c41;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Pagina3.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="index.html">Menú &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="informatica1/cortes.html">Cortes (Informática 1)</a></li>
+                        <li><a href="bebidas.html">Bebidas (Con y sin alcohol)</a></li>
+                        <li><a href="entradas.html">Entradas</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#beneficios">Beneficios</a></li>
+                <li><a href="index.html#empresa">Nuestra Empresa</a></li>
+                <li><a href="index.html#sucursal">Sucursal y Domicilio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <section>
+        <h1>Menú de Postres</h1>
+
+        <h2>Postres Clásicos</h2>
+        <ul>
+            <li>
+                <strong>Cheesecake de Fresa</strong>
+                <div class="ingredientes">Ingredientes: Galletas, queso crema, azúcar, fresas frescas, mantequilla.</div>
+                <div class="receta">Receta: Tritura las galletas con mantequilla y coloca en el fondo del molde. Mezcla el queso crema con azúcar y vierte sobre la base. Decora con fresas.</div>
+                <img src="https://images.unsplash.com/photo-1593511289432-849c6b18d7ea?auto=format&fit=crop&w=500&q=80" alt="Cheesecake de fresa" />
+            </li>
+            <li>
+                <strong>Tarta de Limón</strong>
+                <div class="ingredientes">Ingredientes: Galletas, mantequilla, leche condensada, jugo de limón.</div>
+                <div class="receta">Receta: Prepara la base con galletas y mantequilla. Mezcla leche condensada y jugo de limón, vierte sobre la base y refrigera hasta que tome consistencia.</div>
+                <img src="https://images.unsplash.com/photo-1612797654129-26b2ab6ec5b6?auto=format&fit=crop&w=500&q=80" alt="Tarta de Limón" />
+            </li>
+            <li>
+                <strong>Brownie de Chocolate</strong>
+                <div class="ingredientes">Ingredientes: Chocolate oscuro, mantequilla, azúcar, huevos, harina.</div>
+                <div class="receta">Receta: Derrite el chocolate con la mantequilla, añade los demás ingredientes y hornea por 25 minutos. Sirve con helado.</div>
+                <img src="https://images.unsplash.com/photo-1556740761-80c0d8d5a4b3?auto=format&fit=crop&w=500&q=80" alt="Brownie de chocolate" />
+            </li>
+        </ul>
+
+        <h2>Postres Especiales</h2>
+        <ul>
+            <li>
+                <strong>Macarons de Vainilla</strong>
+                <div class="ingredientes">Ingredientes: Azúcar glas, claras de huevo, almendra molida, vainilla.</div>
+                <div class="receta">Receta: Bate las claras a punto de nieve, mezcla con el azúcar y la almendra molida. Forma pequeños círculos, hornea y rellena con crema de vainilla.</div>
+                <img src="https://images.unsplash.com/photo-1602521362439-4cf29c70b4d1?auto=format&fit=crop&w=500&q=80" alt="Macarons de vainilla" />
+            </li>
+            <li>
+                <strong>Flan de Vainilla</strong>
+                <div class="ingredientes">Ingredientes: Leche, azúcar, huevos, vainilla.</div>
+                <div class="receta">Receta: Mezcla los ingredientes y cocina al baño maría hasta que tome consistencia. Enfriar y desmoldar.</div>
+                <img src="https://images.unsplash.com/photo-1627361210703-79c38fc498c9?auto=format&fit=crop&w=500&q=80" alt="Flan de vainilla" />
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 Galletas Deliciosas | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
+
+
+
