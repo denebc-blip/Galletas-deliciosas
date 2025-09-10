@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Culinario</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #FFF8E7; /* Beige tipo pan */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('https://i.ibb.co/0V8mY0L/fondo-comida.png'); /* Fondo decorativo */
+      background-size: cover;
+    }
+
+    form {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      color: #E63946; /* Rojo tomate */
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #FFB703; /* Amarillo maíz */
+      margin-top: 5px;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #2A9D8F; /* Verde albahaca */
+      background-color: #f0fff8;
+    }
+
+    button {
+      background-color: #F77F00; /* Naranja zanahoria */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #E63946; /* Rojo tomate */
+      transform: scale(1.05);
+    }
+
+    .food-img {
+      width: 60px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/manbgnvq" method="POST">
+    <input type="hidden" name="_to" value="24110811@isu.edu.mx">
+
+    <img src="https://i.ibb.co/4sMJ6Pj/taco.png" alt="Taco" class="food-img">
+    <img src="https://i.ibb.co/5LMt7Wv/pizza.png" alt="Pizza" class="food-img">
+
+    <h2>🍴 Opinión Culinaria</h2>
+    <p>Queremos conocer tu experiencia gastronómica</p>
+
+    <label>
+      📧 Tu correo:
+      <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+    </label>
+
+    <label>
+      🍲 Platillo favorito:
+      <input type="text" name="platillo" placeholder="Ej. Enchiladas verdes" required>
+    </label>
+
+    <label>
+      ⭐ Calificación:
+      <select name="calificacion" required>
+        <option value="">-- Selecciona --</option>
+        <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+        <option value="4">⭐⭐⭐⭐ Muy buena</option>
+        <option value="3">⭐⭐⭐ Buena</option>
+        <option value="2">⭐⭐ Regular</option>
+        <option value="1">⭐ Mala</option>
+      </select>
+    </label>
+
+    <label>
+      💬 Comentarios adicionales:
+      <textarea name="comentarios" placeholder="Cuéntanos qué mejorarías o qué te encantó" rows="4"></textarea>
+    </label>
+
+    <button type="submit">🍽️ Enviar Opinión</button>
+
+    <img src="https://i.ibb.co/9tWwNTr/hamburguesa.png" alt="Hamburguesa" class="food-img">
+    <img src="https://i.ibb.co/nLCZcBb/cupcake.png" alt="Cupcake" class="food-img">
+  </form>
+
+</body>
+</html>

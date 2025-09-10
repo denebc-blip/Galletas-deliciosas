@@ -122,6 +122,32 @@
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
         }
 
+        /* Estilo para botones */
+        .btn-download {
+            display:inline-block; 
+            margin:10px; 
+            padding:12px 25px; 
+            color:white; 
+            text-decoration:none; 
+            border-radius:8px; 
+            font-weight:bold; 
+            transition:background-color 0.3s ease;
+        }
+
+        .btn-green {
+            background-color:#81c784;
+        }
+        .btn-green:hover {
+            background-color:#66bb6a;
+        }
+
+        .btn-blue {
+            background-color:#4fc3f7;
+        }
+        .btn-blue:hover {
+            background-color:#29b6f6;
+        }
+
         /* Estilo para el apartado "Danos tu opinión" */
         #opinion {
             text-align: center;
@@ -149,18 +175,19 @@
     <header>
         <nav>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li class="dropdown">
                     <a href="#">Menú &#9662;</a>
                     <ul class="dropdown-content">
                         <li><a href="cortes.html">Cortes</a></li>
-                        <li><a href="Bebidas.html">Bebidas</a></li>
+                        <li><a href="bebidas.html">Bebidas</a></li>
                         <li><a href="Postres.html">Postres</a></li>
                     </ul>
                 </li>
                 <li><a href="#beneficios">Beneficios</a></li>
                 <li><a href="#empresa">Nuestra Empresa</a></li>
                 <li><a href="#sucursal">Sucursal y Domicilio</a></li>
+                <li><a href="#info">Más Información</a></li>
             </ul>
         </nav>
     </header>
@@ -175,7 +202,7 @@
             <li>Mejoran el ánimo debido a su contenido en azúcares naturales.</li>
             <li>Contienen antioxidantes que pueden beneficiar la salud cardiovascular.</li>
         </ul>
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Galletas deliciosas" />
+        <img src="galletas.jpg" alt="Galletas deliciosas" />
     </section>
 
     <!-- Sección de Empresa -->
@@ -187,7 +214,7 @@
             <li>Innovación constante en sabores.</li>
             <li>Compromiso con la sostenibilidad.</li>
         </ul>
-        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80" alt="Nuestra empresa" />
+        <img src="valores.jpg" alt="Nuestra empresa" />
     </section>
 
     <!-- Sección Sucursal y Domicilio -->
@@ -201,7 +228,7 @@
             Ciudad Sabor, CP 45678,<br />
             País: México.
         </address>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Sucursal de Galletas" />
+        <img src="lugar.jpg" alt="Sucursal de Galletas" />
 
         <h2>¿Cómo pedir a domicilio?</h2>
         <p>Para recibir nuestras deliciosas galletas en la comodidad de tu hogar, puedes:</p>
@@ -211,14 +238,28 @@
             <li>Usar nuestra app móvil disponible para iOS y Android (próximamente).</li>
             <li>Visitar nuestra página de pedidos en línea en <a href="https://galletasdeliciosas.com/pedidos" target="_blank" rel="noopener noreferrer">galletasdeliciosas.com/pedidos</a>.</li>
         </ul>
-        <img src="https://images.unsplash.com/photo-1542838687-44e83ed6c785?auto=format&fit=crop&w=800&q=80" alt="Entrega a domicilio" />
+        <img src="pedidos.jpg" alt="Entrega a domicilio" />
+    </section>
+
+    <!-- Sección Más Información -->
+    <section id="info">
+        <h1>📂 Más Información</h1>
+        <p>Aquí puedes descargar nuestros documentos con promociones y detalles de nuestros productos:</p>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="Cupones.pdf" download="Promociones-Galletas.pdf" class="btn-download btn-green">
+                🎟️ Descargar Cupones
+            </a>
+            <a href="Tríptico.pdf" download="Triptico-Galletas.pdf" class="btn-download btn-blue">
+                📖 Descargar Tríptico
+            </a>
+        </div>
     </section>
 
     <!-- Apartado de opinión -->
     <section id="opinion">
         <h1>📝 Danos tu opinión</h1>
         <p>Tu opinión es muy importante para nosotros. ¡Haz clic abajo para compartirla!</p>
-        <a href="file:///C:/Users/Sala%20de%20Computo%2013/Documents/Informatica%201/2Formulario.html">
+        <a href="2Formulario.html">
             Ir al formulario ✍️
         </a>
     </section>
@@ -230,4 +271,3 @@
 
 </body>
 </html>
-
