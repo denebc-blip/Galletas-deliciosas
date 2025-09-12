@@ -1,107 +1,273 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú de Cortes</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f8f8;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #c0392b;
-      color: white;
-      padding: 20px;
-      font-size: 24px;
-    }
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .card h3 {
-      margin: 10px 0;
-      color: #c0392b;
-    }
-    .downloads {
-      margin: 30px 0;
-    }
-    .btn-download {
-      display: inline-block;
-      padding: 12px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn-green {
-      background: #27ae60;
-    }
-    .btn-green:hover {
-      background: #219150;
-    }
-    .btn-blue {
-      background: #2980b9;
-    }
-    .btn-blue:hover {
-      background: #1f6690;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galletas Deliciosas</title>
+    <style>
+        /* Estilos para la página principal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1; /* Amarillo claro */
+            color: #6d4c41; /* Marrón */
+            min-height: 100vh;
+            padding-bottom: 80px; /* espacio para footer fijo */
+        }
+
+        header {
+            background-color: #f8bbd0; /* Rosa claro */
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6d4c41;
+            font-weight: bold;
+            padding: 5px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b; /* Amarillo brillante */
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        nav .dropdown:hover > .dropdown-content {
+            display: block;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8bbd0; /* Rosa claro */
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav .dropdown-content li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ffd54f; /* Amarillo suave */
+        }
+
+        nav .dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        nav .dropdown-content li a {
+            color: #6d4c41;
+            font-weight: normal;
+        }
+
+        nav .dropdown-content li a:hover {
+            background-color: #ffeb3b;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        section {
+            max-width: 900px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #ad1457; /* Rosa más intenso para títulos */
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #f8bbd0;
+            text-align: center;
+            padding: 12px 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-weight: bold;
+            color: #6d4c41;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Estilo para botones */
+        .btn-download {
+            display:inline-block; 
+            margin:10px; 
+            padding:12px 25px; 
+            color:white; 
+            text-decoration:none; 
+            border-radius:8px; 
+            font-weight:bold; 
+            transition:background-color 0.3s ease;
+        }
+
+        .btn-green {
+            background-color:#81c784;
+        }
+        .btn-green:hover {
+            background-color:#66bb6a;
+        }
+
+        .btn-blue {
+            background-color:#4fc3f7;
+        }
+        .btn-blue:hover {
+            background-color:#29b6f6;
+        }
+
+        /* Estilo para el apartado "Danos tu opinión" */
+        #opinion {
+            text-align: center;
+            margin: 40px auto;
+        }
+        #opinion a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #ffb74d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #opinion a:hover {
+            background-color: #ffa726;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    🍖 Menú de Cortes Premium
-  </header>
 
-  <section class="menu">
-    <div class="card">
-      <img src="galletas.jpg" alt="Corte 1">
-      <h3>Galletas Artesanales</h3>
-      <p>Hechas con ingredientes 100% naturales.</p>
-    </div>
-    <div class="card">
-      <img src="valores.jpg" alt="Corte 2">
-      <h3>Nuestros Valores</h3>
-      <p>Calidad, tradición y confianza en cada producto.</p>
-    </div>
-    <div class="card">
-      <img src="lugar.jpg" alt="Corte 3">
-      <h3>Visítanos</h3>
-      <p>Un espacio único para disfrutar lo mejor en carnes.</p>
-    </div>
-    <div class="card">
-      <img src="pedidos.jpg" alt="Corte 4">
-      <h3>Haz tu Pedido</h3>
-      <p>Fácil, rápido y con servicio a domicilio.</p>
-    </div>
-  </section>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Menú &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cortes.html">Cortes</a></li>
+                        <li><a href="bebidas.html">Bebidas</a></li>
+                        <li><a href="Postres.html">Postres</a></li>
+                    </ul>
+                </li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#empresa">Nuestra Empresa</a></li>
+                <li><a href="#sucursal">Sucursal y Domicilio</a></li>
+                <li><a href="#info">Más Información</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="downloads">
-    <h2>📂 Descargas</h2>
-    <a href="Cupones.pdf" download="Cupones.pdf" class="btn-download btn-green">
-      🎟️ Descargar Cupones
-    </a>
-    <a href="Triptico.pdf" download="Triptico.pdf" class="btn-download btn-blue">
-      📖 Descargar Tríptico
-    </a>
-  </section>
+    <!-- Sección de Beneficios -->
+    <section id="beneficios">
+        <h1>Beneficios de Comer Galletas</h1>
+        <p>Comer galletas no solo es delicioso, sino también tiene varios beneficios para tu salud:</p>
+        <ul>
+            <li>Fuente de energía rápida.</li>
+            <li>Ricas en carbohidratos y fibra.</li>
+            <li>Mejoran el ánimo debido a su contenido en azúcares naturales.</li>
+            <li>Contienen antioxidantes que pueden beneficiar la salud cardiovascular.</li>
+        </ul>
+        <img src="galletas.jpg" alt="Galletas deliciosas" />
+    </section>
+
+    <!-- Sección de Empresa -->
+    <section id="empresa">
+        <h1>Valores e Inicios de Nuestra Empresa</h1>
+        <p>Fundada con el amor por la repostería, nuestra empresa comenzó con una pequeña receta familiar y creció hasta convertirse en un referente en la producción de galletas de calidad. Nuestros valores incluyen:</p>
+        <ul>
+            <li>Calidad en cada producto.</li>
+            <li>Innovación constante en sabores.</li>
+            <li>Compromiso con la sostenibilidad.</li>
+        </ul>
+        <img src="valores.jpg" alt="Nuestra empresa" />
+    </section>
+
+    <!-- Sección Sucursal y Domicilio -->
+    <section id="sucursal">
+        <h1>Nuestra Sucursal y Servicio a Domicilio</h1>
+        <h2>Ubicación de la Sucursal</h2>
+        <p>Nuestra sucursal principal se encuentra en la siguiente dirección:</p>
+        <address>
+            Calle de las Galletas 123,<br />
+            Colonia Dulce Aroma,<br />
+            Ciudad Sabor, CP 45678,<br />
+            País: México.
+        </address>
+        <img src="lugar.jpg" alt="Sucursal de Galletas" />
+
+        <h2>¿Cómo pedir a domicilio?</h2>
+        <p>Para recibir nuestras deliciosas galletas en la comodidad de tu hogar, puedes:</p>
+        <ul>
+            <li>Hacer tu pedido por teléfono al <strong>+52 55 1234 5678</strong>.</li>
+            <li>Enviar un WhatsApp al <strong>+52 55 8765 4321</strong>.</li>
+            <li>Usar nuestra app móvil disponible para iOS y Android (próximamente).</li>
+            <li>Visitar nuestra página de pedidos en línea en <a href="https://galletasdeliciosas.com/pedidos" target="_blank" rel="noopener noreferrer">galletasdeliciosas.com/pedidos</a>.</li>
+        </ul>
+        <img src="pedidos.jpg" alt="Entrega a domicilio" />
+    </section>
+
+    <!-- Sección Más Información -->
+    <section id="info">
+        <h1>📂 Más Información</h1>
+        <p>Aquí puedes descargar nuestros documentos con promociones y detalles de nuestros productos:</p>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="Cupones.pdf" download="Cupones.pdf" class="btn-download btn-green">
+                🎟️ Descargar Cupones
+            </a>
+            <a href="Tríptico.pdf" download="Triptico.pdf" class="btn-download btn-blue">
+                📖 Descargar Tríptico
+            </a>
+        </div>
+    </section>
+
+    <!-- Apartado de opinión -->
+    <section id="opinion">
+        <h1>📝 Danos tu opinión</h1>
+        <p>Tu opinión es muy importante para nosotros. ¡Haz clic abajo para compartirla!</p>
+        <a href="2Formulario.html">
+            Ir al formulario ✍️
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Galletas Deliciosas | Todos los derechos reservados
+    </footer>
+
 </body>
 </html>
